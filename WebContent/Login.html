@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Vcart Login</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<script>
+function validateUserId(){
+	var uname = document.getElementById("uName").value;
+	if(uname.length<5)
+	{
+		alert("Username should be greater than 5 characters");
+		return false;
+	}
+}
+</script>
+<script type="text/javascript">
+function back_block()
+{
+window.history.foward(-1)
+}
+</script>
+<form action="loginServlet" method="post" id="myForm">
+<div id="blank">
+</div>
+<div id="logo_login">
+Welcome to Vcart
+</div>
+<br><br><br><br>
+<div id="userpass">
+<table >
+<tr>
+	<td>Username</td>
+	<td><input type="text" name="username" id="uName"></td>
+	<!-- <jsp:useBean id="customer" class="model.Customer"></jsp:useBean> -->
+</tr>
+<tr>
+	<td>Password</td>
+	<td><input type="password" name="password"></td>
+</tr>
+<tr>
+	<td align="right"><button type="submit" value="Login" onclick="return validateUserId()">Login</button></td>
+	<td align="center"><button type="reset" value="Reset">Reset</button></td>
+</tr>
+</table>
+<!-- <jsp:setProperty name="customer" property="username" param="username">
+<jsp:setProperty name="customer" property="password" param="password"> -->
+<!-- Username : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username"><br><br>
+Password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password"> -->
+</div>
+<br>
+<div id="new_user">
+New User <font color="dark grey" ><b>Sign up</b></font> for FREE !!
+</div>
+</form>
+</body>
+</html>
